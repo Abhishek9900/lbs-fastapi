@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lbs-fastapi"
+version = "0.1.0"
+description = "FastAPI for LBS navigation project"
+authors = [{name = "Abhishek Kripal", email = "s86akrip@uni-bonn.de"}, {name = "Chra Jawhar", email = "s22cjawh@uni-bonn.de"}]
+dependencies = [
+    "numpy==2.4.4",
+    "fastapi==0.136.1",
+    "uvicorn==0.47.0",
+    "pydantic==2.13.4",
+    "networkx==3.6.1",
+    "osmnx==2.1.0",
+    "pyproj==3.7.2",
+    "rasterio==1.5.0",
+]
+requires-python = ">=3.14.0"
+
+[tool.setuptools]
+packages = ["app"]

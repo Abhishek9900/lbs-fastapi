@@ -1,0 +1,312 @@
+.sliderWrapper {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    width: 30%;
+}
+.slidecontainer {
+    padding: 6px 0 16px 0;
+    background: rgba(255, 128, 0, 0.2)
+}
+
+.weightsButton {
+    width: 46%;
+    padding: 8px 16px;
+    font-weight: 800;
+    background-color: rgb(251, 187, 0);
+    color: #0a55a1;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.slider-input {
+    min-width: 100%;
+}
+
+.inputWrapper {
+    text-align: center;
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.label {
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+}
+
+.switch,
+.input:checked + .label .left,
+.input:not(:checked) + .label .right {
+    pointer-events: all;
+    cursor: pointer;
+}
+
+/* most of the stuff below is the same as the W3Schools stuff,
+but modified a bit to reflect changed HTML structure */
+
+.input {
+    display: none;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+input:checked + .label .slider {
+    background-color: #2196f3;
+}
+
+input:focus + .label .slider {
+    box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .label .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* styling to make it look like your screenshot */
+
+.left, .right {
+    margin: 0 .5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+#legend-container {
+    position: absolute;
+    bottom: 20px; /* Sol alta sabitlenmesi için */
+    left: 20px; /* Sol kenara yakın tut */
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    z-index: 1000;
+    max-width: 400px; /* Boyutu sabit tut */
+}
+
+#legend-container h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#legend-list {
+    list-style: none;
+    padding: 0;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.legend-item img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.legend-item img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+.datetime-container {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: Arial, sans-serif;
+}
+
+.datetime-container label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.datetime-container input {
+    padding: 8px;
+    width: 200px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    cursor: pointer;
+}
+/* Legend içindeki ok butonları için stil */
+#altPathNavigation {
+    position: absolute;
+    bottom: 5px;   /* legend kutusunun üst kısmına yakın */
+    right: 1px; /* legend kutusunun sağ kısmına yakın */
+    display: block;
+    gap: 5px;
+}
+
+.nav-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 2px 6px;
+    color: #0a55a1;
+}
+
+/* Hover efekti */
+.nav-button:hover {
+    color: #2196f3;
+}
+
+.boxRight {
+        display: flex;
+        justify-content: flex-end; /* Resmi en sağa yapıştırır */
+        align-items: center;
+    }
+
+    #logo {
+        max-height: 50px;
+        margin-left: auto; /* Otomatik olarak sola boşluk bırakır ve sağa yaslanır */
+    }
+
+
+/* ------------------*/
+.slider-input {
+    min-width: 100%;
+}
+
+.inputWrapper {
+    text-align: center;
+    font-weight: 800;
+    font-size: 18px;
+}
+@media screen and (max-width: 600px) {
+    .slidecontainer {
+        flex-direction: column;
+    }
+    .sliderWrapper {
+        width: 46%;
+    }
+    .weightsButton {
+        width: 100%;
+    }
+  }
+
+.slider-input {
+    width: calc(18% - 10px); /* Slayderları yan yana sığacak genişlikte ayarlayın */
+    -webkit-appearance: none;
+    height: 8px;
+    background: #d3d3d3;
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider-input#sharedLengthRestrictionRange {
+    background: linear-gradient(90deg, rgba(222,196,244,1) 0%, rgba(179,136,215,1) 25%, rgba(130,82,172,1) 50%, rgba(94,50,131,1) 75%, rgba(59,27,87,1) 100%);
+}
+.slider-input#slopeRange {
+    background: linear-gradient(90deg, rgba(214,255,251,1) 0%, rgba(116,222,211,1) 25%, rgba(64,224,208,1) 50%, rgba(15,185,168,1) 75%, rgba(11,124,112,1) 100%);
+}
+.slider-input#lengthRestrictionRange {
+    background: linear-gradient(90deg, rgba(241,188,157,1) 0%, rgba(238,160,115,1) 25%, rgba(241,97,14,1) 50%, rgba(217,79,0,1) 75%, rgba(142,53,2,1) 100%);
+}
+.slider-input#localOptimalityRange{
+    background: linear-gradient(90deg, rgb(186, 215, 248) 0%, rgb(117, 166, 230) 25%, rgb(0, 115, 218) 50%, rgb(29, 71, 234) 75%, rgba(0, 35, 165) 100%);
+}
+
+.slider-input:hover {
+    opacity: 1;
+}
+
+
+.slider-input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 30px;
+    height: 35px;
+    background: url('slider-thumb.svg') center center no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.slider-input::-webkit-slider-thumb:hover {
+    width: 44px;
+    height: 50px;
+}
+
+.slider-input::-moz-range-thumb {
+    width: 150px;
+    height: 150px;
+    background: url('slider-thumb.svg') center center no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+/* Style for the loading indicator */
+.loading-indicator {
+    width: 20px;
+    height: 20px;
+    border: 3px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 3px solid #0a55a1;
+    animation: spin 1s linear infinite;
+    margin-left: 10px;
+}
+
+/* Loader animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Disabled Button Style */
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
