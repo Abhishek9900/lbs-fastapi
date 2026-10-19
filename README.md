@@ -53,9 +53,3 @@ The API will be available at http://localhost:8000
 ## Algorithm
 
 Refer to [Navigation Documentation](./Navigation_Documentation.md) for more details.
-
-## Authors
-
-Abhishek Kripal - <s86akrip@uni-bonn.de>
-
-Chra Jawhar - <s22cjawh@uni-bonn.de>
